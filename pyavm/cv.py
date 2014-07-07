@@ -53,6 +53,7 @@ SPATIAL_COORDINATE_FRAME_CHOICES = [
     'ECL',
     'GAL',
     'SGAL',
+    'HPC',
 ]
 
 SPATIAL_EQUINOX_CHOICES = [

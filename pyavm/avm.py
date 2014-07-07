@@ -478,6 +478,9 @@ class AVM(AVMContainer):
         elif ctype in ['SGAL']:
             xcoord = "SLON"
             ycoord = "SLAT"
+        elif ctype in ['HPC']:
+            xcoord = "HPLN"
+            ycoord = "HPLT"
         else:
             raise Exception("Unknown coordinate system: %s" % ctype)
 
@@ -622,6 +625,8 @@ class AVM(AVMContainer):
             self.Spatial.CoordinateFrame = 'GAL'
         elif xcoord == 'SLON' and ycoord == 'SLAT':
             self.Spatial.CoordinateFrame = 'SGAL'
+        elif xcoord == 'HPLN' and ycoord == 'HPLT':
+            self.Spatial.CoordinateFrame = 'HPC'
         else:
             raise Exception("Unknown coordinate system: {0}/{1}".format(xcoord, ycoord))
 
